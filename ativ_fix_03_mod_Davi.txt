@@ -1,0 +1,43 @@
+Var
+
+opcao: inteiro
+nome: caractere
+HEM, HSM, HET,HST,H_trabalhadasM, H_trabalhadasT,atraso_M,Atraso_T: vetor [1..31] de inteiro
+resp : caractere
+D: vetor[1..5] de inteiro
+i,pesq,totatr,toth,tt,tm,atraso_t_cont,atraso_m_cont: inteiro
+
+
+//IMPRESSÃO
+resp <- "1"
+enquanto (resp = "1") faca
+   Escreval
+   Escreval ("                                                         ")
+   Escreval ("  1 - Para exibir as horas trabalhadas pelo funcionario  ")
+   Escreval ("  2 - Para exibir as faltas do funcionario               ")
+   escreval ("  ______________________________________________________ ")
+   Escreval
+   Escreva  ("DIGITE AQUI A SUA RESPOSTA: ")
+   leia (pesq)
+
+   escolha (pesq)
+   caso 1
+   escreval ("• O funcionario trabalhou este mês por ",toth," horas.")
+   caso 2
+   Escreval ("• Este mês o funcionario obteve ",totatr," horas de atraso!")
+   Escreval ("• O funcionario atrasou ",atraso_m_cont," vezes no turno da manhã.")
+   Escreval ("• O funcionario atrasou ",atraso_t_cont," vezes no turno da tarde.")
+
+   fimescolha
+   Escreval ("")
+   Escreval ("• Deseja continuar ?")
+   Escreval ("- RESPONDA COM '1' PARA SIM | '2' PARA NÃO")
+   Escreval
+   Escreva  ("DIGITE AQUI A SUA RESPOSTA: ")
+   leia (resp)
+
+fimenquanto
+
+fimse
+
+Fimalgoritmo
