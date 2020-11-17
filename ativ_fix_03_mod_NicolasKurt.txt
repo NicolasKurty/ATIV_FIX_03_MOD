@@ -1,0 +1,26 @@
+Var
+
+opcao: inteiro
+nome: caractere
+HEM, HSM, HET,HST,H_trabalhadasM, H_trabalhadasT,atraso_M,Atraso_T: vetor [1..31] de inteiro
+resp : caractere
+D: vetor[1..5] de inteiro
+i,pesq,totatr,toth,tt,tm,atraso_t_cont,atraso_m_cont: inteiro
+
+
+// CÁLCULO
+   tm <- (H_trabalhadasM[i] + tm)
+   tt <- (H_trabalhadasT[i] + tt)
+   totatr <- ((Atraso_T[i] + Atraso_M[i]) + totatr)
+   toth <- ((H_trabalhadasM[i] + H_trabalhadasT[i]) + toth)
+fimpara
+
+
+para i de 1 ate 2 faca
+   se HEM [i] > 8 entao
+      atraso_m_cont <- atraso_m_cont + 1
+   fimse
+   se HET [i] > 13 entao
+      atraso_t_cont <- atraso_t_cont + 1
+   fimse
+fimpara
