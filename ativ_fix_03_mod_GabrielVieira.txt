@@ -1,0 +1,65 @@
+Var
+
+opcao: inteiro
+nome: caractere
+HEM, HSM, HET,HST,H_trabalhadasM, H_trabalhadasT,atraso_M,Atraso_T: vetor [1..31] de inteiro
+resp : caractere
+D: vetor[1..5] de inteiro
+i,pesq,totatr,toth,tt,tm,atraso_t_cont,atraso_m_cont: inteiro
+
+
+Inicio
+
+// TIVEMOS AUXILIO DO GRUPO DO DIOGO OISHI PARA O DESENVOLVIMENTO DESSA ATIVIDADE!
+
+// ENTRADA
+
+Escreval("====================================")
+Escreval("======== ESCOLHA UMA OPÇÃO =========")
+Escreval("====================================")
+Escreval("      1 - INSERIR OS HORÁRIOS       ")
+Escreval("      2 - FECHAR O PROGRAMA         ")
+Escreval("====================================")
+  leia (opcao)
+
+  limpatela
+
+Escreva ("Insira o seu NOME: ")
+           leia (nome)
+
+  se opcao = 1 entao
+  
+Escreval ("Olá ",nome,", seja bem-vindo!")
+Escreval ("por favor, adicione as horas dos dias correspondentes!")
+Escreval
+
+  para i de 1 ate 2 faca
+
+Escreval (i,"° DIA")
+Escreval
+
+//MANHÃ
+
+Escreva  ("Horário de ENTRADA | MANHÃ: ")
+         leia (HEM[i])
+Escreval
+
+Escreva ("Horário de SAIDA | MANHÃ: ")
+        leia (HSM[i])
+Escreval
+
+H_trabalhadasM[i] <- HSM[i]- HEM[i]
+atraso_M[i] <- H_trabalhadasM[i] - 4
+
+//TARDE
+
+Escreva  ("Horário de ENTRADA | TARDE: ")
+         leia (HET[i])
+Escreval
+
+Escreva ("Horário de SAIDA | TARDE: ")
+        leia (HST[i])
+Escreval
+        
+H_trabalhadasT[i] <- HSM[i]- HEM[i]
+atraso_T[i] <- H_trabalhadasT[i] - 4
